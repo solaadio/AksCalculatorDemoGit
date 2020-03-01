@@ -1,0 +1,36 @@
+git init
+
+git add .
+
+git commit -m "initial commit"
+
+** create empty repository AksCalculatorDemoGit on github.com
+git remote add origin git@github.com:solaadio/AksCalculatorDemoGit.git
+
+git remote -v
+
+git push -u origin master
+
+create develop branch from master 
+
+
+
+Create Azure DevOps Project
+
+Create PAT on GitHub
+
+Use GitHub PAT to Create GitHub connection
+
+Create namespaces & resources
+dev.dev
+qa.qa
+Staging.staging
+prod.prod
+AksCalculatorDemo.dev
+AksCalculatorDemo.default
+
+
+Create Docker Registry Connection and update pipeline later 
+
+
+
