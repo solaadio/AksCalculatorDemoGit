@@ -18,7 +18,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '59860ce4-6d7b-485e-974a-610c6c168a08'
+  dockerRegistryServiceConnection: 'DockerConnectionGitHub'
   imageRepository: 'akscalculator'
   containerRegistry: 'acrzodizorto.azurecr.io'
   dockerfilePath: '**/src/AksCalculator/Dockerfile'
