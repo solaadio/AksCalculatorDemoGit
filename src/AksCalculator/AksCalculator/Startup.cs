@@ -27,7 +27,7 @@ namespace AksCalculator
                 {
                     Version = "v1",
                     Title = "AksCalculator API",
-                    Description = "Implementation of AksCalculator in ASP.NET Core Web API",
+                    Description = "Implementation of AksCalculator in ASP.NET Core Web API deployed to GitHub",
                     TermsOfService = "None",
                     Contact = new Contact
                     {
@@ -59,7 +59,7 @@ namespace AksCalculator
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "VATToolBox ASP.NET Core Web API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "VATToolBox ASP.NET Core Web API deployed to GitHub");
                 c.RoutePrefix = string.Empty;
             });
             app.UseMvc();
