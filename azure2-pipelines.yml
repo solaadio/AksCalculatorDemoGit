@@ -84,7 +84,7 @@ stages:
               action: deploy
               namespace: $(k8sNamespaceForPR)
               manifests: |
-                $(Pipeline.Workspace)/manifests/akscalculator.yml
+                $(Pipeline.Workspace)/manifests/akscalculator2.yml
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
           
@@ -129,7 +129,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/akscalculator.yml
+                $(Pipeline.Workspace)/manifests/akscalculator2.yml
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
 
@@ -154,7 +154,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/akscalculator.yml
+                $(Pipeline.Workspace)/manifests/akscalculator2.yml
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
 
@@ -179,7 +179,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/akscalculator.yml
+                $(Pipeline.Workspace)/manifests/akscalculator2.yml
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
 
@@ -204,7 +204,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/akscalculator.yml
+                $(Pipeline.Workspace)/manifests/akscalculator2.yml
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
 
