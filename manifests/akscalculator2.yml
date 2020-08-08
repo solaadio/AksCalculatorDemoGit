@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: akscalculator
-          image: dwpdevsharedcr.azurecr.io/akscalculator:v1
+          image: mondevappsharedcr.azurecr.io/akscalculator:v1
           ports:
           - containerPort: 80
 ---
