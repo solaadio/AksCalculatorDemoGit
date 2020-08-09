@@ -83,6 +83,7 @@ stages:
           - task: KubernetesManifest@0
             displayName: Deploy to the new namespace in the Kubernetes cluster
             inputs:
+              kubernetesServiceConnection: 'AksCalculatorDemo'
               action: deploy
               namespace: $(k8sNamespaceForPR)
               manifests: |
@@ -96,6 +97,8 @@ stages:
             continueOnError: true
             inputs:
               command: get
+              connectionType: 'Kubernetes Service Connection'
+              kubernetesServiceEndpoint: 'AksCalculatorDemo'
               namespace: $(k8sNamespaceForPR)
               arguments: svc
               outputFormat: jsonpath='http://{.items[0].status.loadBalancer.ingress[0].ip}:{.items[0].spec.ports[0].port}'
