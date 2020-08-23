@@ -17,6 +17,13 @@ spec:
           image: mondevappsharedcr.azurecr.io/akscalculator:v1
           ports:
           - containerPort: 80
+          resources:
+            requests:
+              cpu: "150m"
+              memory: "200Mi"
+            limits:
+              cpu: "300m"
+              memory: "400Mi"
 ---
 apiVersion: v1
 kind: Service
