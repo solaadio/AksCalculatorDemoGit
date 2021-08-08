@@ -37,7 +37,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: 'my-new-pool'
+      name: $(vmImageName) 
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -61,7 +61,7 @@ stages:
     displayName: Deploy Pull request
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/pull/'))
     pool:
-      name: 'my-new-pool' 
+      name: $(vmImageName) 
     environment: 'AksCalculatorDemo.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
@@ -119,7 +119,7 @@ stages:
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
     displayName: Deploy DEV Job
     pool:
-      name: 'my-new-pool' 
+      name: $(vmImageName) 
     environment: 'dev.dev'
     strategy:
       runOnce:
@@ -143,7 +143,7 @@ stages:
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
     displayName: Deploy QA Job
     pool:
-      name: 'my-new-pool' 
+      name: $(vmImageName) 
     environment: 'qa.qa'
     strategy:
       runOnce:
@@ -167,7 +167,7 @@ stages:
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
     displayName: Deploy STAGING Job
     pool:
-      name: 'my-new-pool' 
+      name: $(vmImageName) 
     environment: 'staging.staging'
     strategy:
       runOnce:
@@ -191,7 +191,7 @@ stages:
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
     displayName: Deploy PROD Job
     pool:
-      name: 'my-new-pool' 
+      name: $(vmImageName) 
     environment: 'prod.prod'
     strategy:
       runOnce:
